@@ -6,7 +6,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const app = express();
+export const app = express();
 const PORT = 3000;
 
 // Body parser
