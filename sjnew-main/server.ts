@@ -355,15 +355,4 @@ app.post('/api/send-contact', async (req, res) => {
 });
 
 // Vite middleware & Static Serving
-// Production static serving for Vercel
-if (process.env.VERCEL) {
-  const distPath = path.join(process.cwd(), 'dist');
-
-  app.use(express.static(distPath));
-
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(distPath, 'index.html'));
-  });
-}
-
 export default app;
