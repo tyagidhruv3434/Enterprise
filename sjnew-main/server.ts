@@ -4,9 +4,10 @@ import path from 'path';
 import nodemailer from 'nodemailer';
 import dotenv from 'dotenv';
 
+
 dotenv.config();
 
-export const app = express();
+ const app = express();
 const PORT = 3000;
 
 // Body parser
