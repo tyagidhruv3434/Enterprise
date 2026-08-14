@@ -1,6 +1,6 @@
 import express from 'express';
 import path from 'path';
-import { createServer as createViteServer } from 'vite';
+
 import nodemailer from 'nodemailer';
 import dotenv from 'dotenv';
 
@@ -355,28 +355,15 @@ app.post('/api/send-contact', async (req, res) => {
 });
 
 // Vite middleware & Static Serving
-async function startServer() {
-  if (process.env.NODE_ENV !== 'production') {
-    const vite = await createViteServer({
-      server: { middlewareMode: true },
-      appType: 'spa',
-    });
-    app.use(vite.middlewares);
-  } else {
-    const distPath = path.join(process.cwd(), 'dist');
-    app.use(express.static(distPath));
-    app.get('*', (req, res) => {
-      res.sendFile(path.join(distPath, 'index.html'));
-    });
-  }
+// Production static serving for Vercel
+if (process.env.VERCEL) {
+  const distPath = path.join(process.cwd(), 'dist');
 
-  app.listen(PORT, '0.0.0.0', () => {
-    console.log(`SJ Sharda Enterprises server listening on http://0.0.0.0:${PORT}`);
+  app.use(express.static(distPath));
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(distPath, 'index.html'));
   });
-}
-
-if (!process.env.VERCEL) {
-  startServer();
 }
 
 export default app;
