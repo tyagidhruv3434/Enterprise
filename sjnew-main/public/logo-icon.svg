@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <!-- Outer Rounded Container -->
+  <rect width="200" height="200" rx="36" fill="#0F172A"/>
+  
+  <!-- Subtle Border Accent -->
+  <rect width="192" height="192" x="4" y="4" rx="32" fill="none" stroke="#38BDF8" stroke-width="2" stroke-opacity="0.3"/>
+
+  <!-- Geometric "SJ" Monogram Badge -->
+  <g transform="translate(100, 100)">
+    <!-- Shield / Diamond Outer Geometry -->
+    <path d="M0,-65 L60,-30 L60,35 L0,70 L-60,35 L-60,-30 Z" fill="#1E293B" stroke="#334155" stroke-width="4"/>
+    
+    <!-- Left Accent Fold (Orange) -->
+    <path d="M-60,-30 L0,0 L0,70 L-60,35 Z" fill="#EA580C" opacity="0.95"/>
+    
+    <!-- Top-Right Accent Fold (Steel Blue) -->
+    <path d="M0,-65 L60,-30 L0,0 Z" fill="#0284C7"/>
+    
+    <!-- Stylized White "SJ" Monogram Overlay -->
+    <!-- Letter S -->
+    <path d="M-22,-32 C-22,-44 -12,-50 0,-50 C12,-50 20,-44 22,-36 L8,-34 C7,-39 2,-42 0,-42 C-4,-42 -10,-40 -10,-33 C-10,-25 15,-23 15,-5 C15,10 0,16 -14,16 C-28,16 -36,8 -36,-4 L-24,-4 C-24,3 -18,8 -12,8 C-6,8 2,5 2,-4 C2,-13 -22,-14 -22,-32 Z" fill="#FFFFFF" transform="translate(-12, -2)"/>
+
+    <!-- Letter J -->
+    <path d="M12,-38 L24,-38 L24,18 C24,34 10,42 -6,42 C-18,42 -28,36 -32,26 L-20,22 C-18,27 -12,32 -6,32 C2,32 12,27 12,18 L12,-38 Z" fill="#FFFFFF" transform="translate(12, -2)"/>
+  </g>
+</svg>

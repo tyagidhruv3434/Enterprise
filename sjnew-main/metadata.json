@@ -1,0 +1,6 @@
+{
+  "name": "SJ Sharda Enterprises",
+  "description": "Official corporate website for SJ Sharda Enterprises - Heavy Fabrication, Precision Machining, Industrial Trading & Contract Manufacturing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
